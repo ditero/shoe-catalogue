@@ -1,0 +1,204 @@
+html, body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.container {
+  max-width: 885px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+}
+.container2{
+   margin: 0 60px;
+}
+.jumbotron {
+  background-image: url("sshoes.jpg");
+  background-size: cover;
+  height: 550px;
+  margin: 0 auto;
+
+}
+
+.header {
+ background-image: url("wallsho.jpg");
+ height: 100px;
+ position: fixed;
+ left: 0;
+ top: 0;
+ z-index: 10000;
+ width: 100%;
+
+}
+
+.header h1{
+  color: #333;
+  text-shadow: 4px 2px 8px #fff;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  margin: 0.8% 1%;
+  margin-right: 25%;
+  font-size: 190%;
+  display: inline-table;
+}
+
+.header input{
+    display: inline-table;
+    margin: 0 auto;
+    float:end;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 20px auto;
+  padding: 20px 0;
+  border-color: #fff;
+}
+
+.nav li {
+  color: lavender;
+  display: inline;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  margin-right: 45px;
+  text-transform: uppercase;
+}
+
+.nav select{
+ margin: 0 auto;
+ padding: 1px;
+ border: 2px solid #333;
+ width: 100px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+}
+
+button{
+ margin: 0 auto;
+ padding: 1px;
+ border: 2px solid #333;
+ width: 80px;
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+ border-radius: 5px;
+}
+
+.main {
+  position: relative;
+  top: 90px;
+
+}
+
+ .shoe{
+ background-color: #FFF;
+ padding: 20px;
+ position: relative;
+ width: 500px;
+ margin: 0 20%;
+ }
+ .photoColumn img{
+  width: 20%;
+  height: 15%;
+  float: left;
+}
+img {
+  max-width: 80%;
+  height: 195px;
+  margin: 0 10%;
+}
+ .infoColumn {
+  width: 65%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+}
+.infoColumn h2{
+    color: black;
+}
+.stockInput{
+    display: inline-block;
+    width: 260px;
+    float: right;
+    margin:110px;
+    margin-bottom: 10px;
+}
+.stockInput input {
+    margin: 0 1.5px;
+    margin-bottom: 10px;
+}
+.stockInput h2{
+    color: #fff;
+    text-shadow: 4px 2px 4px #333;
+    margin: 0 1.5px;
+    margin-bottom: 10px;
+}
+.stockInput button{
+
+    margin: 0 2.5px;
+
+}
+.supporting {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+}
+
+.supporting .col {
+  float: left;
+  width: 33%;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+.supporting .col img{
+  height: 60%;
+  width: 50%;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  display: block;
+  opacity: 1;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 18px;
+}
+.supporting img {
+  height: 27px;
+  position: center;
+}
+
+.supporting h2 {
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.supporting p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 50px;
+  margin-bottom: 40px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.footer p {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  text-align: center;
+  position: relative;
+}
+.displayMenu{
+    max-width: 800px;
+    position: relative;
+}

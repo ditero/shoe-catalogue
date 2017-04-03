@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="shoe-catalogue.css">
+    <title>shoe-catalogue</title>
+  </head>
+  <body>
+    <div class="header">
+     <h1>BEKXIN SHOE CATALOGUE</h1>
+       <input type="text" id="userName" placeholder="Username">
+        <input type="password" id="passCode" placeholder="Password">
+        <button id="addmnBtn">Login</button>>
+        <script  type="text/x-handlebars-some-template" id="addStock">
+
+              <div class="stockInput">
+                <h2>Add more stock...</h2>
+                <input type="text" id="addBrand" placeholder="Add shoe Brand">
+                <select id="addSize">
+                    <option>Size</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                </select>
+                <input type="text" id="addPrize" placeholder="Add shoe price">
+                <input type="text" id="addQty" placeholder="Add quantity">
+                <input type="text" id="addColor" placeholder="Add shoe color"><input type='file' id='browseImg'>
+                <button id="submitStock">Submit</button><button id="exitStockInput">Exit</button>
+
+              </div>
+
+	</script>
+
+        <div class="container2">
+          <ul class="nav">
+
+            <select id="menListColor">
+
+                <option>Select Color</option>>
+
+               <script  type="text/x-handlebars-some-template" id="listColor">
+                   <option name="color">{{color}}</option>
+               </script>
+
+            </select>
+
+            <select id="menListSize">
+               <option>Select Size</option>>
+                <script  type="text/x-handlebars-some-template" id="listSize">
+                    <option name="color">{{size}}</option>
+		</script>
+
+            </select>
+
+            <button id='sbtn'>Search</button>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="jumbotron">
+        <div class="container">
+          <div class="main">
+              <div class="displayMenu">
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="supporting">
+        <div class="container">
+
+          <div class="col">
+            <img src="dblstrap.jpg">
+            <p>Double Strap</p>
+
+          </div>
+          <div class="col">
+             <img src="wmnboot.jpg">
+             <h2></h2>
+             <ol id="stockAvail">
+
+             </ol>
+
+           </div>
+            <div class="col">
+             <img src="wmn.jpg">
+             <h2></h2>
+             <ol id="stockAvail">
+
+             </ol>
+
+           </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="footer">
+        <div class="container">
+          <p>Design By: Anele Sigenu @ CodeX</p>
+        </div>
+      </div>
+
+      <script id="myTemplate" type="text/x-handlebars-some-template">
+        {{#each shoes}}
+        <div class="shoe">
+          <div class="photoColumn">
+            <img src="{{photo}}">
+          </div>
+
+          <div class="infoColumn">
+            <h2> {{brand}}</h2>
+            <p>{{color}}<p/>
+            <p>Stock available: {{in_stock}}</p>
+            <h4>R{{price}}</h4>
+            </div>
+
+        </div>
+      {{/each}}
+
+      </script>
+
+      <script src="handlebars-v4.0.5.js" charset="utf-8"></script>
+      <script src="shoe-catalogue.js" charset="utf-8"></script>
+  </body>
+</html>
