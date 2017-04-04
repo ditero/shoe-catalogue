@@ -13,7 +13,7 @@
         <button id="addmnBtn">Login</button>>
         <script  type="text/x-handlebars-some-template" id="addStock">
 
-              <div class="stockInput">
+
                 <h2>Add more stock...</h2>
                 <input type="text" id="addBrand" placeholder="Add shoe Brand">
                 <select id="addSize">
@@ -29,9 +29,9 @@
                 <input type="text" id="addPrize" placeholder="Add shoe price">
                 <input type="text" id="addQty" placeholder="Add quantity">
                 <input type="text" id="addColor" placeholder="Add shoe color"><input type='file' id='browseImg'>
-                <button id="submitStock">Submit</button><button id="exitStockInput">Exit</button>
+                <button id="submitStock">Submit</button>
+                <button id="exitStockInput">Exit</button>
 
-              </div>
 
 	</script>
 
@@ -51,8 +51,8 @@
             <select id="menListSize">
                <option>Select Size</option>>
                 <script  type="text/x-handlebars-some-template" id="listSize">
-                    <option name="color">{{size}}</option>
-		</script>
+                    <option name="size">{{size}}</option>
+		            </script>
 
             </select>
 
@@ -63,6 +63,9 @@
 
 
       <div class="jumbotron">
+           <div class="addStockStyle">
+
+          </div>
         <div class="container">
           <div class="main">
               <div class="displayMenu">

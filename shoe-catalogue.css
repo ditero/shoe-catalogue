@@ -14,7 +14,7 @@ html, body {
    margin: 0 60px;
 }
 .jumbotron {
-  background-image: url("sshoes.jpg");
+  background-image: url("shoes.jpg");
   background-size: cover;
   height: 550px;
   margin: 0 auto;
@@ -62,7 +62,7 @@ html, body {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 12px;
-  margin-right: 45px;
+  margin-right: 35px;
   text-transform: uppercase;
 }
 
@@ -86,23 +86,19 @@ button{
  border-radius: 5px;
 }
 
-.main {
-  position: relative;
-  top: 90px;
-
-}
-
  .shoe{
- background-color: #FFF;
- padding: 20px;
+ /*background-color: #FFF;*/
+ padding: 10px;
  position: relative;
- width: 500px;
- margin: 0 20%;
+ width: 580px;
+ top: 12px;
+
  }
  .photoColumn img{
-  width: 20%;
-  height: 15%;
+  width: 30%;
+  height: 20%;
   float: left;
+  margin: 0 auto;
 }
 img {
   max-width: 80%;
@@ -113,23 +109,25 @@ img {
   width: 65%;
   box-sizing: border-box;
   margin: 0 auto;
-  text-align: center;
+  text-align: right;;
 }
 .infoColumn h2{
     color: black;
 }
-.stockInput{
+.addStockStyle{
     display: inline-block;
     width: 260px;
     float: right;
-    margin:110px;
+    margin:30px 80%;
     margin-bottom: 10px;
+     z-index: auto;
+     position: fixed;
 }
-.stockInput input {
-    margin: 0 1.5px;
-    margin-bottom: 10px;
+.addStockStyle input{
+
+    margin-bottom: 14px;
 }
-.stockInput h2{
+.addStockStyle h2{
     color: #fff;
     text-shadow: 4px 2px 4px #333;
     margin: 0 1.5px;
@@ -199,6 +197,11 @@ img {
   position: relative;
 }
 .displayMenu{
-    max-width: 800px;
-    position: relative;
+    width: 325px;
+}
+.displayMenu {
+    background-color: #FFF;
+    margin: 10% 18%;
+    height: 550px;
+    width: 650px;
 }
