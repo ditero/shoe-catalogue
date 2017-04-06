@@ -171,7 +171,7 @@ button{
   padding: 0 50px;
   margin-bottom: 40px;
 }
-.col p{
+.col li{
   list-style: none;
   text-align: left;
   left: 0;
