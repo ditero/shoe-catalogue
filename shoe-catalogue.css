@@ -51,7 +51,7 @@ html, body {
 
 .nav {
   list-style-type: none;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 20px 0;
   border-color: #fff;
 }
@@ -88,35 +88,34 @@ button{
 
  .shoe{
  /*background-color: #FFF;*/
- padding: 10px;
- position: relative;
- width: 580px;
- top: 12px;
+ /*padding: 10px;*/
+ width: 45%;
+ top: 20px;
+ display: inline-block;
 
  }
  .photoColumn img{
   width: 30%;
   height: 20%;
-  float: left;
   margin: 0 auto;
 }
-img {
-  max-width: 80%;
-  height: 195px;
-  margin: 0 10%;
+.shoe img {
+  width: 60%;
+  margin: 2% 10%;
+  bottom: 0;
 }
  .infoColumn {
-  width: 65%;
-  box-sizing: border-box;
-  margin: 0 auto;
-  text-align: right;;
+  width: 50%;
+  text-align: center;
+  top: 0;
+  line-height: 1px;
 }
 .infoColumn h2{
     color: black;
 }
 .addStockStyle{
     display: inline-block;
-    width: 260px;
+    width: 270px;
     float: right;
     margin:30px 80%;
     margin-bottom: 10px;
@@ -126,6 +125,7 @@ img {
 .addStockStyle input{
 
     margin-bottom: 14px;
+
 }
 .addStockStyle h2{
     color: #fff;
@@ -133,11 +133,7 @@ img {
     margin: 0 1.5px;
     margin-bottom: 10px;
 }
-.stockInput button{
 
-    margin: 0 2.5px;
-
-}
 .supporting {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -196,12 +192,12 @@ img {
   text-align: center;
   position: relative;
 }
-.displayMenu{
-    width: 325px;
-}
+
 .displayMenu {
     background-color: #FFF;
-    margin: 10% 18%;
+    margin: 10% 8%;
     height: 550px;
-    width: 650px;
+    width: 680px;
+    overflow-y: scroll;
+
 }

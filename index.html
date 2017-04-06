@@ -10,12 +10,12 @@
      <h1>BEKXIN SHOE CATALOGUE</h1>
        <input type="text" id="userName" placeholder="Username">
         <input type="password" id="passCode" placeholder="Password">
-        <button id="addmnBtn">Login</button>>
+        <button id="addmnBtn">Login</button>
+
         <script  type="text/x-handlebars-some-template" id="addStock">
 
-
                 <h2>Add more stock...</h2>
-                <input type="text" id="addBrand" placeholder="Add shoe Brand">
+                <input type="text" id="addBrand" placeholder="Add Brand">
                 <select id="addSize">
                     <option>Size</option>
                     <option value="5">5</option>
@@ -26,16 +26,17 @@
                     <option value="10">10</option>
                     <option value="11">11</option>
                 </select>
-                <input type="text" id="addPrize" placeholder="Add shoe price">
-                <input type="text" id="addQty" placeholder="Add quantity">
-                <input type="text" id="addColor" placeholder="Add shoe color"><input type='file' id='browseImg'>
+                <input type="number" min="300.00" max="2000" id="addPrice" placeholder="Add Price">
+                <input type="number" min="1" max="2000000" id="addQty" placeholder="Quantity">
+                <input type="text" id="addColor" placeholder="Add Color"><input type='file' id='browseImg'>
                 <button id="submitStock">Submit</button>
                 <button id="exitStockInput">Exit</button>
 
 
 	</script>
-
+ 
         <div class="container2">
+
           <ul class="nav">
 
             <select id="menListColor">
@@ -59,6 +60,7 @@
             <button id='sbtn'>Search</button>
           </ul>
         </div>
+
       </div>
 
 
@@ -113,9 +115,9 @@
       <script id="myTemplate" type="text/x-handlebars-some-template">
         {{#each shoes}}
         <div class="shoe">
-          <div class="photoColumn">
+
             <img src="{{photo}}">
-          </div>
+
 
           <div class="infoColumn">
             <h2> {{brand}}</h2>
