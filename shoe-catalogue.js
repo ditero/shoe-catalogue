@@ -115,8 +115,7 @@ addmnBtn.addEventListener('click', function(){
     errorMsg.innerHTML = "Wrong password. Try again.";
   }
   // Add Stock into the Object.
-  var objSize = shoes.length;
-  addStockBtn.addEventListener('click', function(e){
+     addStockBtn.addEventListener('click', function(e){
       var myImg = new Image();
       myImg = browseImg.value.replace("C:\\fakepath\\","");
 
@@ -127,7 +126,7 @@ addmnBtn.addEventListener('click', function(){
       map.brand = addBrand.value;
       map.in_stock  = addQty.value;
       map.photo = myImg;
-      shoes[objSize] = map;
+      shoes.push(map);
 //Update dropdown List
       optionColor = document.createElement('option');
       optionSize = document.createElement('option');
@@ -135,13 +134,13 @@ addmnBtn.addEventListener('click', function(){
       optionSize.innerHTML = sizeTemplate(shoes[objSize]);
       menListColor.appendChild(optionColor);
       menListSize.appendChild(optionSize);
+
 //Display the added item
-      var addedShoe = [];
-      addedShoe.push(shoes[objSize]);
-      var allShoes = myTemplateInstance({shoes : addedShoe});
+
+      var allShoes = myTemplateInstance({shoes : shoes});
       displayMenu.innerHTML = allShoes;
-      objSize++;
-    console.log(shoes);
+
+    // console.log(shoes);
   }, false);
 });
 

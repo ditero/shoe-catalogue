@@ -54,6 +54,7 @@ html, body {
   margin: 0 auto;
   padding: 20px 0;
   border-color: #fff;
+  display: inline-block;
 }
 
 .nav li {
@@ -142,15 +143,12 @@ button{
 
 .supporting .col {
   float: left;
-  width: 33%;
   font-family: 'Raleway', sans-serif;
   text-align: center;
 }
 .supporting .col img{
   height: 60%;
   width: 50%;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
   display: block;
   opacity: 1;
   border-bottom: 1px solid #ecf0f1;
@@ -158,7 +156,6 @@ button{
 }
 .supporting img {
   height: 27px;
-  position: center;
 }
 
 .supporting h2 {
@@ -173,6 +170,12 @@ button{
   line-height: 20px;
   padding: 0 50px;
   margin-bottom: 40px;
+}
+.col li{
+  list-style: none;
+  text-align: left;
+  left: 0;
+
 }
 
 .clearfix {
