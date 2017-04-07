@@ -129,6 +129,7 @@ addmnBtn.addEventListener('click', function(){
   });
   // Add Stock into the Object.
      addStockBtn.addEventListener('click', function(e){
+       var extOption = shoes.length;
       var myImg = new Image();
       myImg = browseImg.value.replace("C:\\fakepath\\","");
 
@@ -143,8 +144,8 @@ addmnBtn.addEventListener('click', function(){
 //Update dropdown List
       optionColor = document.createElement('option');
       optionSize = document.createElement('option');
-      optionColor.innerHTML = colorTemplate(shoes[objSize]);
-      optionSize.innerHTML = sizeTemplate(shoes[objSize]);
+      optionColor.innerHTML = colorTemplate(shoes[extOption]);
+      optionSize.innerHTML = sizeTemplate(shoes[extOption]);
       menListColor.appendChild(optionColor);
       menListSize.appendChild(optionSize);
 
