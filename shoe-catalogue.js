@@ -75,20 +75,30 @@ function searchRslts(){
   for (var i = 0; i < shoes.length; i++) {
     if ((menListColor.value === shoes[i].color) && (menListSize.value == shoes[i].size)) {
       filteredShoes.push(shoes[i]);
-      noMatch = true;
+      //noMatch = true;
+        }
+        else if (menListColor.value === shoes[i].color) {
+          filteredShoes.push(shoes[i]);
+        }
+        else if (menListSize.value == shoes[i].size) {
+          filteredShoes.push(shoes[i]);
+
         }
 
   }
-  if (noMatch === true) {
-    displayMenu.innerHTML = "";
-    var genRatedValue = myTemplateInstance({shoes : filteredShoes});
-    displayMenu.innerHTML = genRatedValue;
-  }
-else {
-  var imageReveal = 'stock.png';
-  displayMenu.innerHTML = "<img src=" + imageReveal + " />";
 
-}
+  var genRatedValue = myTemplateInstance({shoes : filteredShoes});
+  displayMenu.innerHTML = genRatedValue;
+  menListSize.value = menListSize[0].value;
+  menListColor.value = menListColor[0].value;
+  // if (noMatch === true) {
+  //
+  // }
+// else {
+//   var imageReveal = 'stock.png';
+//   displayMenu.innerHTML = "<img src=" + imageReveal + " />";
+//
+// }
 
 };
 
@@ -98,7 +108,7 @@ searchBtn.addEventListener('click', searchRslts);
 addmnBtn.addEventListener('click', function(){
   errorMsg = document.getElementById('errorMsg');
   if (userName.value === 'admin' && passCode.value === 'admin') {
-    //displayMenu.innerHTML  = '';
+    errorMsg.innerHTML  = '';
     addStockStyle.innerHTML = stockTempInstance();
     //
     addBrand =  document.getElementById('addBrand')
@@ -114,6 +124,9 @@ addmnBtn.addEventListener('click', function(){
   else{
     errorMsg.innerHTML = "Wrong password. Try again.";
   }
+  exitStock.addEventListener('click', function(e){
+    addStockStyle.innerHTML = "";
+  });
   // Add Stock into the Object.
      addStockBtn.addEventListener('click', function(e){
       var myImg = new Image();
@@ -135,8 +148,7 @@ addmnBtn.addEventListener('click', function(){
       menListColor.appendChild(optionColor);
       menListSize.appendChild(optionSize);
 
-//Display the added item
-
+//Display the added item to the current list.
       var allShoes = myTemplateInstance({shoes : shoes});
       displayMenu.innerHTML = allShoes;
 

@@ -8,9 +8,13 @@
   <body>
     <div class="header">
      <h1>BEKXIN SHOE CATALOGUE</h1>
-       <input type="text" id="userName" placeholder="Username">
-        <input type="password" id="passCode" placeholder="Password">
-        <button id="addmnBtn">Login</button>
+
+      <div class="login">
+        <input type="text" id="userName" placeholder="Username">
+         <input type="password" id="passCode" placeholder="Password">
+         <button id="addmnBtn">Login</button>
+         <div id="errorMsg"></div>
+      </div>
 
         <script  type="text/x-handlebars-some-template" id="addStock">
 
@@ -50,7 +54,7 @@
             </select>
 
             <select id="menListSize">
-               <option>Select Size</option>>
+               <option selected="select">Select Size</option>>
                 <script  type="text/x-handlebars-some-template" id="listSize">
                     <option name="size">{{size}}</option>
 		            </script>
