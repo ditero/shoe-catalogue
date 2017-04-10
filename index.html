@@ -12,7 +12,7 @@
       <div class="login">
         <input type="text" id="userName" placeholder="Username">
          <input type="password" id="passCode" placeholder="Password">
-         <button id="addmnBtn">Login</button>
+         <button id="addmnBtn">Sign In</button>
          <div id="errorMsg"></div>
       </div>
 
@@ -35,7 +35,7 @@
                 <input type="number" min="1" max="2000000" id="addQty" placeholder="Quantity">
                 <input type="text" id="addColor" placeholder="Add Color"><input type='file' id='browseImg'>
                 <button id="submitStock">Submit</button>
-                <button id="exitStockInput">Exit</button>
+                <button id="exitStockInput">Logout</button>
 
 
 	</script>
@@ -57,11 +57,25 @@
                <option selected="select">Select Size</option>>
                 <script  type="text/x-handlebars-some-template" id="listSize">
                     <option name="size">{{size}}</option>
-		            </script>
+		 </script>
 
             </select>
 
             <button id='sbtn'>Search</button>
+             <div class="brands">
+                 <p>Our Brands</p>
+                 <ul>
+                     <li value='kurt-geiger'>
+                         <button value='magnanni'><img src="kurt-geiger.png"></button>
+                     </li>
+                     <li>
+                         <button value="Tusoni" onclick="tusoni()"><img src="tosoni.png" ></button>
+                     </li>
+                     <li>
+                         <button value='magnanni'><img src="magnanni.png"></button>
+                     </li>
+                 </ul>
+             </div>
           </ul>
         </div>
       </div>
@@ -71,12 +85,15 @@
            <div class="addStockStyle">
 
           </div>
+
         <div class="container">
+
           <div class="main">
               <div class="displayMenu">
 
               </div>
 
+      </div>
           </div>
         </div>
       </div>
@@ -85,24 +102,22 @@
         <div class="container">
 
           <div class="col">
-            <img src="dblstrap.jpg">
-            <ul>
-              <li>Monk Strap</li>
-            </ul>
+            <img src="shoes.png">
+            <li>Tosoni Double Monk Strap</li>
+
 
           </div>
           <div class="col">
-             <img src="wmnboot.jpg">
-             <ul>
-               <li>Zuzan Brown</li>
-             </ul>
+             <img src="wmnboot.png">
+              <li>Zuzan Brown</li>
+
 
            </div>
             <div class="col">
-             <img src="wmn.jpg">
-             <ul>
+             <img src="wmn.png">
+
                <li>Ladies Hlf Boot</li>
-             </ul>
+
 
            </div>
         </div>
@@ -123,7 +138,7 @@
 
 
           <div class="infoColumn">
-            <h2> {{brand}}</h2>
+            <h3> {{brand}}</h3>
             <p>{{color}}<p/>
             <p>Stock available: {{in_stock}}</p>
             <h4>R{{price}}</h4>

@@ -11,14 +11,14 @@ html, body {
 
 }
 .container2{
-   margin: 0 60px;
+   margin: 0 30px;
+   width: 380px
 }
 .jumbotron {
   background-image: url("shoes.jpg");
   background-size: cover;
   height: 550px;
   margin: 0 auto;
-
 }
 
 .header {
@@ -54,7 +54,8 @@ html, body {
 }
 .nav {
   list-style-type: none;
-  margin: 0 auto;
+  margin: 0 0;
+  left: 0;
   padding: 20px 0;
   border-color: #fff;
   display: inline-block;
@@ -95,7 +96,7 @@ button{
  .shoe{
  /*background-color: #FFF;*/
  /*padding: 10px;*/
- width: 45%;
+ width: 250px;
  top: 20px;
  display: inline-block;
 
@@ -109,15 +110,18 @@ button{
   width: 60%;
   margin: 2% 10%;
   bottom: 0;
+  border-bottom: 4px solid #ecf0f1;
 }
  .infoColumn {
-  width: 50%;
+  margin: 0 auto;
   text-align: center;
   top: 0;
   line-height: 1px;
 }
-.infoColumn h2{
-    color: black;
+.infoColumn h3, h4{
+    font-family: arial;
+    text-align: center;
+    font-weight: lighter;
 }
 .addStockStyle{
     display: inline-block;
@@ -125,7 +129,7 @@ button{
     float: right;
     margin:30px 80%;
     margin-bottom: 10px;
-     z-index: auto;
+     /*z-index: auto;*/
      position: fixed;
 }
 .addStockStyle input{
@@ -147,9 +151,9 @@ button{
 }
 
 .supporting .col {
-  float: left;
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
+    float: right;
+    height: 20%;
+    width: 30%;
 }
 .supporting .col img{
   height: 60%;
@@ -158,6 +162,7 @@ button{
   opacity: 1;
   border-bottom: 1px solid #ecf0f1;
   padding-bottom: 18px;
+  float: end;
 }
 .supporting img {
   height: 27px;
@@ -176,10 +181,10 @@ button{
   padding: 0 50px;
   margin-bottom: 40px;
 }
-.col li{
+.supporting .col li{
   list-style: none;
-  text-align: left;
-  left: 0;
+  float: left;
+  text-align: center;
 
 }
 
@@ -202,10 +207,36 @@ button{
 }
 
 .displayMenu {
-    background-color: #FFF;
-    margin: 10% 8%;
+
+    margin: 10% 5%;
     height: 550px;
-    width: 680px;
+    width: 775px;
     overflow-y: scroll;
+
+}
+.brands{
+    text-align: center;
+    float: left;
+
+}
+.brands ul{
+    display: block;
+    left: 0;
+}
+.brands li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.brands img{
+    width: 190px;
+    margin: 0 0;
+}
+.brands li button{
+    /*background-color: #FFFFFF;*/
+    border-color: grey;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    width: 100%;
 
 }

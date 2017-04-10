@@ -1,19 +1,19 @@
 var shoes = [
   {
     color : 'Brown',
-    price : 350.00,
+    price : 2300.00,
     size  : 5,
-    brand : 'Tusoni laceup',
+    brand : 'Tusoni',
     in_stock : 5,
-    photo: "tusoni.jpg"
+    photo: "tusoni.png"
   },
   {
     color : 'Black',
-    price : 275.00,
+    price : 1500.00,
     size  : 6,
     brand : 'Monk Strap',
     in_stock : 3,
-    photo: "monk2.jpg"
+    photo: "monk2.png"
   },
   {
     color : 'Dark Brown',
@@ -21,15 +21,15 @@ var shoes = [
     size  : 7,
     brand : 'Sissy Boy',
     in_stock : 10,
-    photo: "wmnboot.jpg"
+    photo: "wmnboot.png"
   },
   {
     color : 'Pink',
     price : 875.00,
-    size  : 5,
+    size  : 8,
     brand : 'Aldo',
     in_stock : 10,
-    photo: "laceUp.jpg"
+    photo: "laceUp.png"
   }
 
 ];
@@ -51,7 +51,10 @@ var colorTemplate = Handlebars.compile(optColor.innerHTML);
 var sizeTemplate = Handlebars.compile(optSize.innerHTML);
 var optionColor = null;
 var optionSize = null;
+var brands = document.querySelector('.brands');
+var choseBrand = document.getElementsByTagName('button');
 
+var login = document.querySelector('.login');
 var userName = document.getElementById('userName');
 var passCode = document.getElementById('passCode');
 var addmnBtn = document.getElementById('addmnBtn');
@@ -175,4 +178,17 @@ function renderOPtions() {
         menListColor.appendChild(optionColor);
         menListSize.appendChild(optionSize);
     }
+}
+function tusoni(){
+    var myBrand = [];
+    for(var t = 0; t < shoes.length; t++){
+        if(shoes[t].brand === choseBrand.value){
+          myBrand.push(shoes[i]);
+
+    }
+
+    }
+     console.log("Tusoni Shoes");
+    var showMyBrand = myTemplateInstance({shoes : myBrand});
+    displayMenu.innerHTML = showMyBrand;
 }
