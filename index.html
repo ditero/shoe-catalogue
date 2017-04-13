@@ -43,21 +43,26 @@
         <div class="container2">
           <ul class="nav">
 
-            <select id="menListColor">
+            <select class="menListColor">
 
-                <option>Select Color</option>>
+
 
                <script  type="text/x-handlebars-some-template" id="listColor">
-                   <option name="color">{{color}}</option>
+                 <option value=''>Select</option>
+                 {{#each shoes}}
+                   <option name="color">{{this}}</option>
+                {{/each}}
                </script>
 
             </select>
 
-            <select id="menListSize">
-               <option selected="select">Select Size</option>>
-                <script  type="text/x-handlebars-some-template" id="listSize">
-                    <option name="size">{{size}}</option>
-		 </script>
+            <select class="menListSize">
+               <script  type="text/x-handlebars-some-template" id="listSize">
+                 <option value=''>Select</option>
+                  {{#each shoes}}
+                    <option name="size">{{this}}</option>
+                  {{/each}}
+		            </script>
 
             </select>
 
@@ -65,14 +70,14 @@
              <div class="brands">
                  <p>Our Brands</p>
                  <ul>
-                     <li value='kurt-geiger'>
-                         <button value='magnanni'><img src="kurt-geiger.png"></button>
+                     <li>
+                         <button id='kgBrand' value='Kurt Geiger'><img src="kurt-geiger.png"></button>
                      </li>
                      <li>
-                         <button value="Tusoni" onclick="tusoni()"><img src="tosoni.png" ></button>
+                         <button id='tsBrand' value="Tusoni" onclick="getBrand()"><img src="tosoni.png" ></button>
                      </li>
                      <li>
-                         <button value='magnanni'><img src="magnanni.png"></button>
+                         <button id='mgnBrand' value='Magnanni' onclick="getBrand()"><img src="magnanni.png"></button>
                      </li>
                  </ul>
              </div>
@@ -136,9 +141,9 @@
 
             <img src="{{photo}}">
 
-
+<hr>
           <div class="infoColumn">
-            <h3> {{brand}}</h3>
+            <h3>{{brand}}<nav class='sizes'>Size: {{size}}<nav></h3>
             <p>{{color}}<p/>
             <p>Stock available: {{in_stock}}</p>
             <h4>R{{price}}</h4>

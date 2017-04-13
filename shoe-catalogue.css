@@ -110,7 +110,6 @@ button{
   width: 60%;
   margin: 2% 10%;
   bottom: 0;
-  border-bottom: 4px solid #ecf0f1;
 }
  .infoColumn {
   margin: 0 auto;
@@ -122,6 +121,10 @@ button{
     font-family: arial;
     text-align: center;
     font-weight: lighter;
+}
+.sizes{
+  font-size: 15px;
+  float: right;
 }
 .addStockStyle{
     display: inline-block;
@@ -238,5 +241,4 @@ button{
     border-right: none;
     background: transparent;
     width: 100%;
-
 }
