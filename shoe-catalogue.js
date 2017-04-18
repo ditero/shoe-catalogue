@@ -61,6 +61,7 @@ var passCode = document.getElementById('passCode');
 var addmnBtn = document.getElementById('addmnBtn');
 var errorMsg = null;
 var displayMenu = document.querySelector(".displayMenu");
+var currentShoe = null;
 var addStockStyle = document.querySelector(".addStockStyle");
 var myTemplate = document.getElementById("myTemplate");
 var myTemplateInstance = Handlebars.compile(myTemplate.innerHTML);
@@ -81,12 +82,19 @@ function searchRslts(){
       filteredShoes.push(shoes[i]);
       //noMatch = true;
         }
-        else if (menListColor.value === shoes[i].color) {
+
+       else if (menListSize.value == shoes[i].size && menListColor.value == "" ) {
           filteredShoes.push(shoes[i]);
         }
-        else if (menListSize.value == shoes[i].size) {
-          filteredShoes.push(shoes[i]);
+        else if (menListColor.value === shoes[i].color && menListSize.value == "") {
+           filteredShoes.push(shoes[i]);
+         }
 
+        else if (menListSize.value == "All" || menListColor.value === "All") {
+          filteredShoes.push(shoes[i]);
+        }
+        else{
+          noMatch = true;
         }
 
   }
@@ -95,14 +103,6 @@ function searchRslts(){
   displayMenu.innerHTML = genRatedValue;
   menListSize.value = menListSize[0].value;
   menListColor.value = menListColor[0].value;
-  // if (noMatch === true) {
-  //
-  // }
-// else {
-//   var imageReveal = 'stock.png';
-//   displayMenu.innerHTML = "<img src=" + imageReveal + " />";
-//
-// }
 
 };
 
@@ -191,12 +191,12 @@ function uniqSizeList(shoeList){
   return shoeSizes;
 };
 
-
+//Load the current data that is availlable.
 window.onload = function () {
     showShoes(shoes);
 
 }
-
+// Display data and dynamically add unique options to the dropdown list.
 function showShoes(data) {
  var thisColor = uniqColorList(shoes);
  var thisSize = uniqSizeList(shoes);
@@ -232,7 +232,8 @@ var showMyBrand = null;
 var countBrands = null;
 kgBrand.addEventListener('click', function(){
   countBrands = 0;
-  displayMenu.innerHTML = "";
+  currentShoe = document.querySelector(".shoe");
+  currentShoe.className = "none";
       for(var t = 0; t < shoes.length; t++){
 
           if(shoes[t].brand === kgBrand.value){
@@ -242,6 +243,7 @@ kgBrand.addEventListener('click', function(){
 
       }
     }
+    //currentShoe.className = "block";
     showMyBrand = myTemplateInstance({shoes : myBrand});
     displayMenu.innerHTML = showMyBrand;
     countBrands++;
@@ -249,7 +251,7 @@ kgBrand.addEventListener('click', function(){
 
 tsBrand.addEventListener('click', function(){
   countBrands = 0;
-  displayMenu.innerHTML = "";
+currentShoe.className = "none";
       for(var t = 0; t < shoes.length; t++){
 
           if(shoes[t].brand === tsBrand.value){
@@ -266,7 +268,7 @@ tsBrand.addEventListener('click', function(){
 
 mgnBrand.addEventListener('click', function(){
   countBrands = 0;
-  displayMenu.innerHTML = "";
+currentShoe.className = "none";
       for(var t = 0; t < shoes.length; t++){
 
           if(shoes[t].brand === mgnBrand.value){
